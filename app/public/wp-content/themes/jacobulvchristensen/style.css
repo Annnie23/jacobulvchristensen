@@ -1,0 +1,154 @@
+/* Generelle indstillinger */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 15px;
+    color: #2e4b2a;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    max-width: 200px;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-left: auto; /* Placerer menuen til højre */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Fjerner listepunkter og gør menuen vandret */
+.main-navigation ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.main-navigation li {
+    margin-right: 20px;
+}
+
+.main-navigation a {
+    text-decoration: none;
+    color: #2e4b2a;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+.main-navigation a:hover {
+    background-color: #ffa500;
+    color: white;
+}
+
+/* Mobile Navigation */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    background-color: #2e4b2a;
+    height: 4px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Mobile Navigation (Hamburger) */
+@media screen and (max-width: 768px) {
+    header nav {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        padding: 20px;
+    }
+
+    header nav.open {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    header nav a {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    header nav a:hover {
+        background-color: #ffd700;
+    }
+}
+
+/* Container for video og overskrift */
+.hero-section {
+    position: relative;
+    text-align: center; /* Centrerer tekst horisontalt */
+}
+
+.hero-video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Videoen er i baggrunden */
+}
+
+.overskrift_forside {
+    position: absolute;
+    top: 50%; /* Vertikal centering */
+    left: 50%; /* Horisontal centering */
+    transform: translate(-50%, -50%); /* Justerer for præcis centering */
+    color: white; /* Juster farven, så den er synlig på videoen */
+    font-size: 3rem; /* Størrelsen af overskriften */
+    font-weight: bold;
+    z-index: 2; /* Overskriften vises foran videoen */
+}
+
+.overskrift_under_video {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
