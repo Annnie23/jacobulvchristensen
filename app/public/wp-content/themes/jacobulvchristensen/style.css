@@ -12,10 +12,7 @@ body {
     color: #333;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 15px;
-    color: #2e4b2a;
-}
+
 
 /* Header */
 header {
@@ -52,7 +49,7 @@ header .container {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 20px;
+    gap: 20px; 
 }
 
 .main-navigation li {
@@ -68,7 +65,7 @@ header .container {
 
 .main-navigation a:hover {
     background-color: #ffa500;
-    color: white;
+    color: white; 
 }
 
 /* Mobile Navigation */
@@ -121,34 +118,93 @@ header .container {
 }
 
 /* Container for video og overskrift */
-.hero-section {
-    position: relative;
-    text-align: center; /* Centrerer tekst horisontalt */
+/* Gør videoen mørkere */
+.hero-video-wrapper {
+    position: relative; /* For at placere elementer over videoen */
+    overflow: hidden; /* Undgår at indhold rækker ud over containeren */
 }
 
-.hero-video-wrapper {
+.hero-video-wrapper video {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    filter: brightness(50%); /* Gør videoen mørkere */
+    object-fit: cover; /* Sikrer at videoen fylder containeren pænt */
+}
+
+/* Style til overskriften over videoen */
+/* Tekst over videoen - centreret lodret og vandret */
+.hero-title-before-video {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 60%; /* Flytter teksten til midten */
+    left: 50%; /* Flytter teksten til midten vandret */
+    z-index: 2; /* Sørger for at teksten er foran videoen */
+    transform: translate(-50%, -50%); /* Centrerer teksten */
+    text-align: center; /* Centrerer teksten */
+    color: white; /* Sørger for god kontrast */
+    font-size: 2rem; /* Størrelse på teksten */
+    white-space: break-spaces; /* Tillader linjeskift uden <br> */
+    width: 55%; /* Sørg for tekst holder sig indenfor rammen */
+}
+
+/* Placer overskriften under videoen */
+.hero-title-after-video {
+    margin-top: 20px; /* Lidt afstand fra videoen */
+    text-align: center; /* Centrer teksten */
+    font-size: 1.2rem; /* Størrelse på teksten */
+}
+
+
+/* Container til bokse under 'Vi tilbyder' */
+.box-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.box {
+    position: relative;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+.box-image {
     width: 100%;
     height: 100%;
-    z-index: 1; /* Videoen er i baggrunden */
+    object-fit: cover;
+    display: block;
 }
 
-.overskrift_forside {
+.box-title {
     position: absolute;
-    top: 50%; /* Vertikal centering */
-    left: 50%; /* Horisontal centering */
-    transform: translate(-50%, -50%); /* Justerer for præcis centering */
-    color: white; /* Juster farven, så den er synlig på videoen */
-    font-size: 3rem; /* Størrelsen af overskriften */
-    font-weight: bold;
-    z-index: 2; /* Overskriften vises foran videoen */
+    bottom: 10px;
+    width: 100%;
+    color: #a8ad47;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
 }
 
-.overskrift_under_video {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 1.5rem;
+.box-link {
+    text-decoration: none;
+    color: inherit;
 }
 

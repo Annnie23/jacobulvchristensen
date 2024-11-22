@@ -15,6 +15,7 @@ $overskrift_under_video = get_field('overskrift_under_video');
     if (have_posts()) :
         while (have_posts()) : the_post();
 
+            // Video element
             $video_forside = get_field('video_forside');
             if ($video_forside) {
                 echo '<div class="hero-video-wrapper">';
@@ -24,22 +25,28 @@ $overskrift_under_video = get_field('overskrift_under_video');
                 echo '</video>';
                 echo '</div>';
             }
-
-            // Kun overskrift_forside skal centreret og foran videoen
+            
+            // Overskrift før video
             $overskrift_forside = get_field('overskrift_forside');
             if ($overskrift_forside) {
-                echo '<h1 class="overskrift_forside">' . esc_html($overskrift_forside) . '</h1>';
+                echo '<div class="hero-title-before-video">';
+                echo '<h1>' . esc_html($overskrift_forside) . '</h1>';
+                echo '</div>';
             }
 
+            // Overskrift efter video
             $overskrift_under_video = get_field('overskrift_under_video');
             if ($overskrift_under_video) {
-                echo '<h1 class="overskrift_under_video">' . esc_html($overskrift_under_video) . '</h1>';
+                echo '<div class="hero-title-after-video">';
+                echo '<h1>' . esc_html($overskrift_under_video) . '</h1>';
+                echo '</div>';
             }
 
         endwhile;
     endif;
     ?>
 </div>
+
 
 
 <?php
@@ -56,7 +63,7 @@ $tilbud_5_overskrift = get_field('tilbud_5_overskrift');
 ?>
 
 <div class="box-section">
-< class="box-container">
+<div class="box-container">
 <?php
 
 
@@ -177,5 +184,8 @@ if ($tilbud_5) {
 
 
 ?>
+</div>
+</div>
 
 
+<?php get_footer(); ?>
