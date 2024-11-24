@@ -95,3 +95,141 @@
 [22-Nov-2024 06:39:10 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
 [22-Nov-2024 13:52:26 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
 [22-Nov-2024 13:52:30 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 08:25:26 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 08:25:43 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 08:29:56 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 08:30:06 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 08:48:30 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 08:49:06 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 08:49:27 UTC] PHP Warning:  Attempt to read property "html" on null in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\plugins\wp-google-maps\includes\class.admin-ui.php on line 132
+[24-Nov-2024 08:50:34 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 08:52:41 UTC] PHP Fatal error:  Uncaught Exception: WPGMZA\Marker ID '2' not found in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\plugins\wp-google-maps\includes\class.crud.php:414
+Stack trace:
+#0 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\plugins\wp-google-maps\includes\class.crud.php(85): WPGMZA\Crud->read('single-read')
+#1 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\plugins\wp-google-maps\includes\class.marker.php(29): WPGMZA\Crud->__construct('wp_wpgmza', '2', 'single-read')
+#2 [internal function]: WPGMZA\Marker->__construct('2')
+#3 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\plugins\wp-google-maps\includes\class.factory.php(58): ReflectionClass->newInstanceArgs(Array)
+#4 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\plugins\wp-google-maps\includes\class.rest-api.php(928): WPGMZA\Factory::createInstance('2')
+#5 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\plugins\wp-google-maps\includes\class.rest-api.php(148): WPGMZA\RestAPI->markers(Object(WP_REST_Request))
+#6 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-includes\rest-api\class-wp-rest-server.php(1292): WPGMZA\RestAPI->WPGMZA\{closure}(Object(WP_REST_Request))
+#7 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-includes\rest-api\class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/wpgmza/v1/mark...', Array, NULL)
+#8 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-includes\rest-api\class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#9 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-includes\rest-api.php(449): WP_REST_Server->serve_request('/wpgmza/v1/mark...')
+#10 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-includes\class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#11 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#12 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#13 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#14 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-includes\class-wp.php(813): WP->parse_request('')
+#15 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-includes\functions.php(1336): WP->main('')
+#16 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-blog-header.php(16): wp()
+#17 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\index.php(17): require('C:\\Users\\norde\\...')
+#18 {main}
+  thrown in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\plugins\wp-google-maps\includes\class.crud.php on line 414
+[24-Nov-2024 08:53:39 UTC] PHP Fatal error:  Uncaught Exception: WPGMZA\Marker ID '2' not found in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\plugins\wp-google-maps\includes\class.crud.php:414
+Stack trace:
+#0 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\plugins\wp-google-maps\includes\class.crud.php(85): WPGMZA\Crud->read('single-read')
+#1 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\plugins\wp-google-maps\includes\class.marker.php(29): WPGMZA\Crud->__construct('wp_wpgmza', '2', 'single-read')
+#2 [internal function]: WPGMZA\Marker->__construct('2')
+#3 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\plugins\wp-google-maps\includes\class.factory.php(58): ReflectionClass->newInstanceArgs(Array)
+#4 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\plugins\wp-google-maps\includes\class.rest-api.php(928): WPGMZA\Factory::createInstance('2')
+#5 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\plugins\wp-google-maps\includes\class.rest-api.php(148): WPGMZA\RestAPI->markers(Object(WP_REST_Request))
+#6 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-includes\rest-api\class-wp-rest-server.php(1292): WPGMZA\RestAPI->WPGMZA\{closure}(Object(WP_REST_Request))
+#7 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-includes\rest-api\class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/wpgmza/v1/mark...', Array, NULL)
+#8 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-includes\rest-api\class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#9 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-includes\rest-api.php(449): WP_REST_Server->serve_request('/wpgmza/v1/mark...')
+#10 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-includes\class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#11 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#12 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#13 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#14 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-includes\class-wp.php(813): WP->parse_request('')
+#15 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-includes\functions.php(1336): WP->main('')
+#16 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-blog-header.php(16): wp()
+#17 C:\Users\norde\Local Sites\jacobulvchristensen\app\public\index.php(17): require('C:\\Users\\norde\\...')
+#18 {main}
+  thrown in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\plugins\wp-google-maps\includes\class.crud.php on line 414
+[24-Nov-2024 08:55:22 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 08:55:24 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 08:55:47 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 08:58:53 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:00:33 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:02:03 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:02:48 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:03:28 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:03:54 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:04:19 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:04:50 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:05:16 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:05:54 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:06:16 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:06:40 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:06:47 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:08:45 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:08:51 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:09:05 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:09:25 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:09:47 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:09:59 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:10:11 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:11:20 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:12:08 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:14:08 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:14:31 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:14:54 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:16:16 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:20:18 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:22:32 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:34:23 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:35:25 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:37:39 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:37:53 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:38:36 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:38:51 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:39:01 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:41:20 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:41:56 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:42:22 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:42:29 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:42:53 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:43:14 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:43:25 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:43:31 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:43:56 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:44:53 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:46:37 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:46:52 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:46:57 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:47:22 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:48:06 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:49:10 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:49:43 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:49:59 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:50:12 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:50:42 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:51:01 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:52:00 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:56:24 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:58:02 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:58:32 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 09:59:35 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 10:00:17 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 10:00:36 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 10:02:41 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 10:04:04 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 10:07:08 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 10:07:35 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 10:08:27 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 10:09:52 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 10:10:07 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 10:10:41 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 10:11:32 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 10:12:03 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 10:12:35 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 10:13:01 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 10:13:05 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 10:16:58 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 10:19:46 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 10:21:11 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 10:24:24 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 10:24:52 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 10:25:59 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 10:26:12 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24

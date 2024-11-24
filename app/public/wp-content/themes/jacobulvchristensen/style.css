@@ -8,7 +8,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #fff;
     color: #333;
 }
 
@@ -17,7 +17,7 @@ body {
 /* Header */
 header {
     background-color: #fff;
-    padding: 20px;
+    padding: 0 20px 20px 20px;
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -64,8 +64,12 @@ header .container {
 }
 
 .main-navigation a:hover {
-    background-color: #ffa500;
-    color: white; 
+    color: #ffd700; 
+}
+
+.site-logo img {
+    height: 50px; 
+    padding-right: 20px;
 }
 
 /* Mobile Navigation */
@@ -117,6 +121,56 @@ header .container {
     }
 }
 
+
+
+/*Footer' */
+
+.footer {
+    background-color: #f9f8f2; /* Lys beige baggrund */
+    text-align: left;
+    font-family: Arial, sans-serif;
+    color: #2e4b2a; /* Mørkegrøn tekstfarve */
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap; /* Tillader elementer at bryde linjen */
+    justify-content: center; /* Centrerer elementerne horisontalt */
+    max-width: 1200px; /* Giver en breddebegrænsning, så de ikke strækker sig for meget */
+    margin: 0 auto; /* Centrerer hele containeren på siden */
+    padding: 20px;
+    gap: 20px; /* Giver lidt afstand mellem boksene */
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+}
+
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section a {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #2e4b2a;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #ffa500; /* Lys orange hover-effekt */
+}
+
+.footer-map iframe {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+
 /* Container for video og overskrift */
 /* Gør videoen mørkere */
 .hero-video-wrapper {
@@ -136,22 +190,45 @@ header .container {
 /* Tekst over videoen - centreret lodret og vandret */
 .hero-title-before-video {
     position: absolute;
-    top: 60%; /* Flytter teksten til midten */
-    left: 50%; /* Flytter teksten til midten vandret */
-    z-index: 2; /* Sørger for at teksten er foran videoen */
-    transform: translate(-50%, -50%); /* Centrerer teksten */
-    text-align: center; /* Centrerer teksten */
-    color: white; /* Sørger for god kontrast */
-    font-size: 2rem; /* Størrelse på teksten */
-    white-space: break-spaces; /* Tillader linjeskift uden <br> */
-    width: 55%; /* Sørg for tekst holder sig indenfor rammen */
+    top: 50%; /* Sæt teksten til midten af videoens højde */
+    left: 50%; /* Sæt teksten til midten af videoens bredde */
+    transform: translate(-50%, -50%); /* Centrer teksten */
+    text-align: center;
+    color: white; /* Sørg for kontrast mod videoen */
+    font-size: 2rem; /* Startstørrelse for teksten */
+    line-height: 1.4;
+    width: 80%; /* Begræns bredden for at forhindre tekst i at strække sig for meget */
+    white-space: normal; /* Tillader linjebrud */
+    z-index: 10; /* Sørg for, at teksten ligger over videoen */
 }
+
+@media screen and (max-width: 992px) {
+    .hero-title-before-video {
+        font-size: 1.8rem; /* Reducer tekststørrelse */
+        width: 85%; /* Giv mere plads til tekst */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-title-before-video {
+        font-size: 1.5rem; /* Reducer yderligere på mindre skærme */
+        top: 55%; /* Justér placering lidt lavere for små skærme */
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .hero-title-before-video {
+       display: none;
+    }
+}
+
 
 /* Placer overskriften under videoen */
 .hero-title-after-video {
     margin-top: 20px; /* Lidt afstand fra videoen */
     text-align: center; /* Centrer teksten */
     font-size: 1.2rem; /* Størrelse på teksten */
+    color: #2e4b2a;
 }
 
 
@@ -163,6 +240,8 @@ header .container {
     justify-content: center;
     padding: 20px;
 }
+
+
 
 .box-container {
     display: flex;
@@ -179,8 +258,29 @@ header .container {
     max-width: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    
+        flex: 1 1 calc(33.333% - 40px); /* Tre bokse pr. række på store skærme */
+        max-width: calc(33.333% - 40px);
+    
 }
 
+@media screen and (max-width: 768px) {
+    .box {
+        flex: 1 1 calc(50% - 20px); /* To bokse pr. række på mellemstore skærme */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .box {
+        flex: 1 1 100%; /* En boks pr. række på små skærme */
+        max-width: 100%;
+    }
+
+    .box-link {
+        font-size: 1rem; /* Mindre skrifttype til boksene */
+    }
+}
 .box:hover {
     transform: scale(1.05);
 }
@@ -196,11 +296,14 @@ header .container {
     position: absolute;
     bottom: 10px;
     width: 100%;
-    color: #a8ad47;
+    color: #fff;
     padding: 10px;
     text-align: center;
     font-size: 18px;
     font-weight: 600;
+}
+.box-title:hover {
+   color: #ffd700;
 }
 
 .box-link {
@@ -208,3 +311,121 @@ header .container {
     color: inherit;
 }
 
+
+
+
+
+
+
+
+
+/* Mobil (maks. 576px) */
+@media screen and (max-width: 576px) {
+    header .logo {
+        max-width: 150px; /* Reducer logoets størrelse */
+    }
+
+    header nav {
+        font-size: 14px; /* Mindre skrifttype for menupunkter */
+    }
+
+    .footer-container {
+        flex-direction: column; /* Placer elementer i én kolonne */
+        text-align: center; /* Centrer tekst i footer */
+    }
+
+    .box {
+        max-width: 100%; /* Boksene fylder hele bredden */
+    }
+
+    .hero-title-before-video {
+        font-size: 1.5rem; /* Mindre font til overskriften */
+    }
+}
+
+/* Tablet (maks. 768px) */
+@media screen and (max-width: 768px) {
+    header .container {
+        flex-direction: column; /* Placer header-indhold vertikalt */
+        align-items: center;
+    }
+
+    header nav {
+        flex-direction: column; /* Menu i én kolonne */
+        gap: 10px; /* Mindre afstand mellem menupunkter */
+    }
+
+    .box-container {
+        flex-wrap: wrap; /* Tillad boksene at bryde linjen */
+        justify-content: center;
+    }
+
+    .footer-container {
+        flex-direction: column; /* Footer-indhold i én kolonne */
+        text-align: center;
+    }
+}
+
+/* Små desktops og tablets (maks. 992px) */
+@media screen and (max-width: 992px) {
+    header .logo {
+        max-width: 180px;
+    }
+
+    .box {
+        max-width: 45%; /* Giv boksene mere plads */
+    }
+
+    .footer-section {
+        flex: unset; /* Fjern fleksibilitet, så de tilpasses bedre */
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .hero-video-wrapper video {
+        height: auto; /* Sørger for, at videoen tilpasser sig proportionalt */
+    }
+
+   
+}
+
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center; /* Centrerer alt indhold */
+        padding: 0;
+    }
+
+    .footer-section {
+        margin-bottom: 20px; /* Lidt afstand mellem sektionerne */
+        padding: 0; /* Lidt plads på siderne */
+    }
+}
+
+/* Responsiv skalering */
+@media screen and (max-width: 992px) {
+  
+
+    .hero-title-after-video {
+        font-size: 1rem; /* Reducér fontstørrelse */
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+
+    .hero-title-after-video {
+        font-size: 0.9rem; /* Endnu mindre skrifttype */
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+
+    .hero-title-after-video {
+        font-size: 0.8rem; /* Justér fontstørrelse yderligere */
+    }
+}
