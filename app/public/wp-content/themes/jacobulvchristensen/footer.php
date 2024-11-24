@@ -8,13 +8,13 @@
             </div>
         </div>
         <div class="footer-section">
-            <h3>Kontakt os:</h3>
+            <h3>Kontakt os</h3>
             <p><strong>Tlf.:</strong> <a href="tel:+4575457734">+45 75 45 77 34</a></p>
             <p><strong>Email:</strong> <a href="mailto:ju@jacobulv.dk">ju@jacobulv.dk</a></p>
             <p><strong>Adresse:</strong><br> Sneumgårdsvej 2, 6731<br> Tjæreborg</p>
         </div>
         <div class="footer-section">
-            <h3>Følg os:</h3>
+            <h3>Følg os</h3>
             <p><a href="https://www.instagram.com" target="_blank">Instagram</a></p>
             <p><a href="https://www.facebook.com" target="_blank">Facebook</a></p>
         </div>

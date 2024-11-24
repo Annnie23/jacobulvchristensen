@@ -233,3 +233,19 @@ Stack trace:
 [24-Nov-2024 10:24:52 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
 [24-Nov-2024 10:25:59 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
 [24-Nov-2024 10:26:12 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 11:52:27 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 11:53:01 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 11:56:39 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 11:56:42 UTC] PHP Warning:  Undefined variable $contact_title in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\page-kontakt.php on line 6
+[24-Nov-2024 11:57:27 UTC] PHP Warning:  Undefined variable $contact_title in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\page-kontakt.php on line 6
+[24-Nov-2024 12:00:22 UTC] PHP Warning:  Undefined variable $title_over_kontaktformen in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\page-kontakt.php on line 6
+[24-Nov-2024 12:00:26 UTC] PHP Warning:  Undefined variable $title_over_kontaktformen in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\page-kontakt.php on line 6
+[24-Nov-2024 12:30:54 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 12:31:15 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 12:31:22 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 12:31:34 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[24-Nov-2024 13:00:31 UTC] PHP Warning:  Array to string conversion in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-includes\formatting.php on line 1096
+[24-Nov-2024 13:01:33 UTC] PHP Warning:  Array to string conversion in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-includes\formatting.php on line 1096
+[24-Nov-2024 13:02:01 UTC] PHP Warning:  Array to string conversion in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-includes\formatting.php on line 1096
+[24-Nov-2024 13:02:49 UTC] PHP Warning:  Array to string conversion in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-includes\formatting.php on line 1096
+[24-Nov-2024 13:30:16 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
