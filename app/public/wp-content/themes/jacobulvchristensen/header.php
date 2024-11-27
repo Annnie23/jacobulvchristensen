@@ -11,12 +11,25 @@
     <!-- Topbar -->
 <?php 
 $topbar_text = get_field('topbar_text', get_the_ID()); 
-$topbar_link = get_field('topbar_link', get_the_ID());   
+$topbar_link = get_field('topbar_link', get_the_ID()); 
+$topbar_text_2 = get_field('topbar_text_2', get_the_ID()); 
+$icon_1 = get_field('icon_1', get_the_ID()); 
+$icon_2 = get_field('icon_2', get_the_ID());
 
 if ($topbar_text): ?>
     <div class="topbar">
         <p class="topbar-text">
+            <?php if ($icon_1): ?>
+                <img src="<?php echo esc_url($icon_1); ?>" alt="Ikon" class="topbar-icon">
+            <?php endif; ?>
+            
             <span class="topbar-text-content"><?php echo esc_html($topbar_text); ?></span>
+
+            <?php if ($icon_2): ?>
+                <img src="<?php echo esc_url($icon_2); ?>" alt="Ikon" class="topbar-icon">
+            <?php endif; ?>
+
+            <span class="topbar-text-content"><?php echo esc_html($topbar_text_2); ?></span>
             <?php if ($topbar_link): ?>
                 <a href="<?php echo esc_url($topbar_link); ?>" class="topbar-link">Kontakt os idag!</a>
             <?php endif; ?>

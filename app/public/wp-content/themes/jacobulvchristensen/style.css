@@ -142,6 +142,7 @@ header .container {
     font-weight: bold;
     color: #17365d; /* Tekstfarve */
     margin-right: 40px; /* Giv lidt afstand til linket */
+    
 }
 
 .topbar-link {
@@ -153,6 +154,13 @@ header .container {
 
 .topbar-link:hover {
     text-decoration: underline;
+}
+
+.topbar-icon {
+    width: 20px; /* Tilpas ikonstørrelse */
+    height: auto    ; /* Sørg for proportioner */
+    margin-right: 5px; /* Tilføj afstand til tekst */
+
 }
 
 
