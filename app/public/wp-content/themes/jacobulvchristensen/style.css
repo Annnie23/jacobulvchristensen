@@ -8,7 +8,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #fff;
+    background-color: #f9f8f2;
     color: #333;
 }
 
@@ -16,12 +16,12 @@ body {
 
 /* Header */
 header {
-    background-color: #fff;
     padding: 0 20px 20px 20px;
     text-align: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 40px;
 }
 
 header .logo {
@@ -58,13 +58,13 @@ header .container {
 
 .main-navigation a {
     text-decoration: none;
-    color: #2e4b2a;
+    color: #17365d;
     font-weight: bold;
     padding: 10px 15px;
 }
 
 .main-navigation a:hover {
-    color: #ffd700; 
+    color: #adc5d9; 
 }
 
 .site-logo img {
@@ -83,7 +83,7 @@ header .container {
 }
 
 .menu-toggle span {
-    background-color: #2e4b2a;
+    background-color: #17365d;
     height: 4px;
     width: 100%;
     border-radius: 5px;
@@ -117,9 +117,44 @@ header .container {
     }
 
     header nav a:hover {
-        background-color: #ffd700;
+        background-color: #45923b;
     }
 }
+
+
+/*Topbar */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #adc5d9; /* Baggrundsfarve */
+    padding: 10px 20px;
+    z-index: 999;
+    display: flex;
+    justify-content: center; /* Placer elementerne */
+    align-items: center; /* Centrer lodret */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.topbar-text-content {
+    font-size: 16px;
+    font-weight: bold;
+    color: #17365d; /* Tekstfarve */
+    margin-right: 40px; /* Giv lidt afstand til linket */
+}
+
+.topbar-link {
+    font-size: 16px;
+    color: #17365d; /* Linkfarve */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.topbar-link:hover {
+    text-decoration: underline;
+}
+
 
 
 
@@ -129,7 +164,7 @@ header .container {
     background-color: #f9f8f2; /* Lys beige baggrund */
     text-align: left;
     font-family: Arial, sans-serif;
-    color: #2e4b2a; /* Mørkegrøn tekstfarve */
+    color: #17365d; /* Mørkegrøn tekstfarve */
 }
 
 .footer-container {
@@ -156,17 +191,33 @@ header .container {
 .footer-section p, .footer-section a {
     font-size: 18px;
     line-height: 1.6;
-    color: #2e4b2a;
+    color: #17365d;
     text-decoration: none;
 }
 
 .footer-section a:hover {
-    color: #ffa500; /* Lys orange hover-effekt */
+    color: #adc5d9; /* Lys orange hover-effekt */
 }
 
 .footer-map iframe {
     border: 1px solid #ddd;
     border-radius: 5px;
+}
+
+.footer-section .dme-branding {
+    margin-top: 10px; /* Lidt afstand mellem links og logo */
+    text-align: left; /* Centrerer logoet */
+}
+
+.footer-section .dme-branding img {
+    max-width: 100px; /* Tilpas bredden af logoet */
+    height: auto; /* Bevarer proportionerne */
+    display: inline-block; /* For korrekt centrering */
+    transition: transform 0.3s ease; /* Gør logoet interaktivt */
+}
+
+.footer-section .dme-branding img:hover {
+    transform: scale(1.1); /* Gør logoet lidt større ved hover */
 }
 
 
@@ -197,7 +248,7 @@ header .container {
     color: white; /* Sørg for kontrast mod videoen */
     font-size: 2rem; /* Startstørrelse for teksten */
     line-height: 1.4;
-    width: 80%; /* Begræns bredden for at forhindre tekst i at strække sig for meget */
+    width: 55%; /* Begræns bredden for at forhindre tekst i at strække sig for meget */
     white-space: normal; /* Tillader linjebrud */
     z-index: 10; /* Sørg for, at teksten ligger over videoen */
 }
@@ -225,10 +276,10 @@ header .container {
 
 /* Placer overskriften under videoen */
 .hero-title-after-video {
-    margin-top: 20px; /* Lidt afstand fra videoen */
+    margin-top: 40px; /* Lidt afstand fra videoen */
     text-align: center; /* Centrer teksten */
     font-size: 1.2rem; /* Størrelse på teksten */
-    color: #2e4b2a;
+    color: #17365d;
 }
 
 
@@ -290,20 +341,21 @@ header .container {
     height: 100%;
     object-fit: cover;
     display: block;
+    filter: brightness(50%); /* Gør videoen mørkere */
 }
 
 .box-title {
     position: absolute;
-    bottom: 10px;
+    bottom: 50%;
     width: 100%;
     color: #fff;
-    padding: 10px;
     text-align: center;
-    font-size: 18px;
+    font-size: 1.5rem;
     font-weight: 600;
+    z-index: 10;
 }
 .box-title:hover {
-   color: #ffd700;
+   color: #adc5d9;
 }
 
 .box-link {
@@ -323,41 +375,54 @@ header .container {
 
 .contact-form {
     flex: 1;
-    background: #f9f8f2; /* Lys beige baggrund */
+    background: #fff; /* Lys beige baggrund */
     padding: 20px;
-    border-radius: 10px; /* Afrunder hjørnerne */
+    border-radius: 4px; /* Afrunder hjørnerne */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tilføjer en skygge */
 }
 
 .contact-form h2 {
     font-size: 28px;
-    color: #2e4b2a; /* Mørkegrøn som tekstfarve */
+    color: #17365d; /* Mørkegrøn som tekstfarve */
     margin-bottom: 20px;
 }
 
 .contact-form h4 {
     font-size: 20px;
-    color: #ffa500; /* Orange farve for kort tekst */
+    color: #17365d; /* Orange farve for kort tekst */
     margin-bottom: 10px;
 }
 
 .contact-form p {
     font-size: 16px;
-    color: #333;
+    color: #17365d;
     line-height: 1.6;
     padding: 5px;
 }
 
 .contact-form a {
-    color: #ffa500; /* Orange farve til links */
+    color: #17365d; /* Orange farve til links */
     text-decoration: none;
 }
+
+/* Ændrer baggrundsfarve og tekstfarve for inputfelterne */
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form textarea, 
+.wpcf7-form input[type=submit]{
+  background-color: #f9f8f2; /* Hvid baggrund */
+  color: #17365d; /* Sort tekst */
+  border: 1px solid #adc5d9; /* Grå kant */
+  padding: 10px; /* Indvendig afstand */
+  border-radius: 5px; /* Runde hjørner */
+}
+
 
 .contact-map iframe {
     width: 100%;
     height: 100%;
     border: 0;
-    border-radius: 10px;
+    border-radius: 4px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     
 }
@@ -372,7 +437,95 @@ header .container {
 
 
 
+    .h1img {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .h1img img {
+        max-width: 100%;
+        height: auto;
+    }
+    
 
+    .hero-image {
+        display: block;
+        width: 100%;
+        height: 100vh;
+        filter: brightness(50%); /* Gør billedet mørkere */
+        object-fit: cover; /* Sikrer at billedet fylder containeren pænt */
+        margin-bottom: 60px;
+    }
+    
+    .hero-image-wrapper {
+        position: relative; /* For at kunne tilføje tekst eller andre elementer ovenpå billedet */
+        width: 100%;
+        overflow: hidden; /* Sikrer, at billedet ikke rækker udenfor containeren */
+    }
+
+    .service-overskrift{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        font-size: 5rem;
+        z-index: 10;
+}
+    
+    
+    .service-introduction {
+        padding: 20px;
+        max-width: 1200px;
+        margin-left: 60px;
+        margin-bottom: 20px;
+    }
+
+    .service-title {
+        font-size: 1.8rem;
+        color: #2e4b2a;
+        padding: 20px 20px 0 20px;
+        margin-left: 60px;
+    }
+    
+    .service-detail {
+        font-size: 1.2rem;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    
+    ul {
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+    
+    .service-gallery {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    }
+    
+    .service-gallery img {
+        width: 32%;
+        border-radius: 4px;
+    }
+    
+    .service-video video {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* Sikrer at videoen fylder containeren pænt */
+    margin: none;
+    }
+    
+    .line h3 {
+        text-align: center;
+        margin-top: 30px;
+        color: #00509e;
+    }
 
 
 

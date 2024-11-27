@@ -17,6 +17,12 @@
             <h3>Følg os</h3>
             <p><a href="https://www.instagram.com" target="_blank">Instagram</a></p>
             <p><a href="https://www.facebook.com" target="_blank">Facebook</a></p>
+            <div class="dme-branding">
+                <a href="<?php echo home_url(); ?>" class="dme-logo">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/dme.png" alt="DME">
+                </a>
+            </div>
         </div>
+
     </div>
 </footer>

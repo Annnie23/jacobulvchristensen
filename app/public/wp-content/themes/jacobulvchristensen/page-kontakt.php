@@ -4,7 +4,6 @@ get_header();
 
 <?php
 $kort_tekst_over_kontaktformen = get_field('kort_tekst_over_kontaktformen');
-$title_over_kontaktformen = get_field('title_over_kontaktformen');
 $adresse = get_field('adresse');
 $email = get_field('email');
 $telefonummer = get_field('telefonnummer');
@@ -14,9 +13,8 @@ $cvr = get_field('cvr');
 <div class="contact-container">
     <div class="contact-form">
         <h4><?php echo esc_html($kort_tekst_over_kontaktformen); ?></h4>
-        <h2><?php echo esc_html($title_over_kontaktformen); ?></h2>
         <p><?php echo esc_html($adresse); ?></p>
-        <p><?php echo esc_html($email); ?><?php echo esc_html($email); ?></a></p>
+        <p><?php echo esc_html($email); ?></p>
         <p><?php echo esc_html($telefonummer); ?></p>
         <p><?php echo esc_html($cvr); ?></p>
         

@@ -2,8 +2,8 @@
 /* Template Name: Grovfoder */
 get_header(); ?>
 
-<div class="container">
-    <h1><?php the_title(); ?></h1>
+<div class="service-container">
+    <h1 class="service-overskrift"><?php the_title(); ?></h1>
 
     <?php
     // WP Query for at hente indlægget med sluggen 'grovfoder' fra CPT 'services'
@@ -18,23 +18,45 @@ get_header(); ?>
     if ($query->have_posts()) : ?>
         <?php while ($query->have_posts()) : $query->the_post(); ?>
             <div class="service-detail">
-                <h2><?php the_field('titel_over_billede'); ?></h2>
+                
 
                 <?php 
                 // Hent billeddata som array
                 $billede_under_overskrift = get_field('billede_under_overskrift');
                 if ($billede_under_overskrift && is_array($billede_under_overskrift)) : ?>
-                    <img src="<?php echo esc_url($billede_under_overskrift['url']); ?>" alt="<?php echo esc_attr($billede_under_overskrift['alt']); ?>" class="service-image">
+                    <img src="<?php echo esc_url($billede_under_overskrift['url']); ?>" alt="<?php echo esc_attr($billede_under_overskrift['alt']); ?>" class="service-image hero-image">
                 <?php else : ?>
                     <p>Billedet er ikke tilgængeligt.</p>
                 <?php endif; ?>
 
+                <h2 class="service-title"><?php the_field('underoverskrift_1'); ?></h2>
+
                 <div class="service-introduction">
-                    <p><?php the_field('introduktion'); ?></p>
+                    <p><?php the_field('tekst_1'); ?></p>
                 </div>
 
-                <div class="service-description">
-                    <p><?php the_field('beskrivelse'); ?></p>
+                <h2 class="service-title"><?php the_field('underoverskrift_2'); ?></h2>
+
+                <div class="service-introduction">
+                    <p><?php the_field('tekst_2'); ?></p>
+                </div>
+
+                <h2 class="service-title"><?php the_field('underoverskrift_3'); ?></h2>
+
+                <div class="service-introduction">
+                    <p><?php the_field('tekst_3'); ?></p>
+                </div>
+
+                <h2 class="service-title"><?php the_field('underoverskrift_4'); ?></h2>
+
+                <div class="service-introduction">
+                    <p><?php the_field('tekst_4'); ?></p>
+                </div>
+
+                <h2 class="service-title"><?php the_field('underoverskrift_5'); ?></h2>
+
+                <div class="service-introduction">
+                    <p><?php the_field('tekst_5'); ?></p>
                 </div>
 
                 <div class="service-gallery">
@@ -60,14 +82,18 @@ get_header(); ?>
                     <?php endif; ?>
                 </div>
 
-                <?php if (get_field('video')) : ?>
-    <div class="service-video">
-        <video controls autoplay muted>
-            <source src="<?php the_field('video'); ?>" type="video/mp4">
-            <?php _e('Din browser understøtter ikke denne video.', 'text-domain'); ?>
-        </video>
-    </div>
-<?php endif; ?>
+                <?php 
+                $video = get_field('video'); 
+                if ($video) : 
+                ?>
+                    <div class="service-video">
+                        <video autoplay muted loop width="100%">
+                            <source src="<?php echo esc_url($video['url']); ?>" type="<?php echo esc_attr($video['mime_type']); ?>">
+                            <?php _e('Din browser understøtter ikke denne video.', 'text-domain'); ?>
+                        </video>
+                    </div>
+                <?php endif; ?>
+
 
             </div>
         <?php endwhile; ?>
