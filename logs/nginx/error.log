@@ -1,0 +1,1 @@
+2024/11/27 11:16:07 [error] 12300#6096: *5076 directory index of "C:/Users/norde/Local Sites/jacobulvchristensen/app/public/wp-content/cache/" is forbidden, client: 127.0.0.1, server: , request: "GET /wp-content/cache/ HTTP/1.0", host: "jacobulvchristensen.local"

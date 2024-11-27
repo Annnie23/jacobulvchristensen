@@ -26,6 +26,7 @@ header {
 
 header .logo {
     max-width: 200px;
+    
 }
 
 header nav {
@@ -68,58 +69,10 @@ header .container {
 }
 
 .site-logo img {
-    height: 50px; 
+    height: 70px; 
     padding-right: 20px;
 }
 
-/* Mobile Navigation */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-}
-
-.menu-toggle span {
-    background-color: #17365d;
-    height: 4px;
-    width: 100%;
-    border-radius: 5px;
-}
-
-/* Mobile Navigation (Hamburger) */
-@media screen and (max-width: 768px) {
-    header nav {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        background-color: #fff;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        padding: 20px;
-    }
-
-    header nav.open {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-
-    header nav a {
-        text-align: center;
-        font-size: 1.2rem;
-    }
-
-    header nav a:hover {
-        background-color: #45923b;
-    }
-}
 
 
 /*Topbar */
@@ -132,17 +85,27 @@ header .container {
     padding: 10px 20px;
     z-index: 999;
     display: flex;
-    justify-content: center; /* Placer elementerne */
-    align-items: center; /* Centrer lodret */
+    justify-content: center; /* Centrerer vandret */
+    align-items: center; /* Centrerer lodret */
+    gap: 20px; /* Afstand mellem grupper */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.topbar-item {
+    display: flex;
+    align-items: center; /* Centrer ikon og tekst lodret */
+    gap: 12px; /* Afstand mellem ikon og tekst */
+}
+
+.topbar-icon {
+    width: 20px; /* Tilpas ikonstørrelse */
+    height: auto;
 }
 
 .topbar-text-content {
     font-size: 16px;
     font-weight: bold;
     color: #17365d; /* Tekstfarve */
-    margin-right: 40px; /* Giv lidt afstand til linket */
-    
 }
 
 .topbar-link {
@@ -156,12 +119,64 @@ header .container {
     text-decoration: underline;
 }
 
-.topbar-icon {
-    width: 20px; /* Tilpas ikonstørrelse */
-    height: auto    ; /* Sørg for proportioner */
-    margin-right: 5px; /* Tilføj afstand til tekst */
 
+/* Standard styling for store skærme */
+.topbar {
+    padding: 10px 20px;
+    flex-direction: row; /* Vandret layout */
+    gap: 20px;
 }
+
+.topbar-item {
+    gap: 8px;
+}
+
+/* Tablet (768px og derunder) */
+@media (max-width: 768px) {
+    .topbar {
+        flex-direction: column; /* Skift til lodret layout */
+        align-items: flex-start; /* Juster indhold til venstre */
+        padding: 10px;
+        gap: 10px; /* Mindre afstand mellem grupper */
+    }
+
+    .topbar-link {
+        margin-top: 10px; /* Tilføj lidt afstand til linket */
+        align-self: center; /* Centrer linket i kolonnelayoutet */
+    }
+}
+
+/* Mobil (480px og derunder) */
+@media (max-width: 480px) {
+    .topbar {
+        font-size: 14px; /* Reducer tekststørrelse */
+        padding: 5px; /* Mindre padding */
+    }
+
+    .topbar-item {
+        gap: 5px; /* Mindre afstand mellem ikon og tekst */
+    }
+
+    .topbar-icon {
+        width: 16px; /* Reducer ikonstørrelse */
+    }
+
+    .topbar-text-content {
+        font-size: 14px; /* Mindre tekststørrelse */
+    }
+
+    .topbar-link {
+        font-size: 14px;
+        text-align: center;
+        margin: 5px auto; /* Sørg for at linket centreres */
+    }
+}
+@media (max-width: 768px) {
+    .topbar-item {
+        display: none; /* Skjul specifikke elementer */
+    }
+}
+
 
 
 
@@ -508,9 +523,9 @@ header .container {
         margin-left: 20px;
     }
     
-    .service-gallery {
+    .service-gallery{
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
     padding: 20px;
@@ -518,6 +533,8 @@ header .container {
     
     .service-gallery img {
         width: 32%;
+        aspect-ratio: 16 / 9; /* Sikrer ens højde-bredde forhold */
+        object-fit: cover; /* Bevarer proportionerne og beskærer billedet */
         border-radius: 4px;
     }
     
@@ -648,5 +665,20 @@ header .container {
 
     .hero-title-after-video {
         font-size: 0.8rem; /* Justér fontstørrelse yderligere */
+    }
+}
+
+
+/* Media query for tablets */
+@media (max-width: 768px) {
+    .service-gallery img {
+        width: 48%; /* To billeder pr. række på mellemstore skærme */
+    }
+}
+
+/* Media query for mobiltelefoner */
+@media (max-width: 480px) {
+    .service-gallery img {
+        width: 100%; /* Ét billede pr. række på små skærme */
     }
 }
