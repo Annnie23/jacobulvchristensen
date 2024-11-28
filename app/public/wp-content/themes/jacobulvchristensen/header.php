@@ -48,7 +48,7 @@ if ($topbar_text || $topbar_text_2): ?>
                     <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>">
                 </a>
             </div>
-
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
             <nav class="main-navigation">
                 <?php
                 wp_nav_menu(array(
@@ -61,7 +61,21 @@ if ($topbar_text || $topbar_text_2): ?>
         </div>
     </header>
 
-   
+   <script>
+    function toggleMenu() {
+    const menu = document.querySelector('.main-navigation ul');
+    menu.classList.toggle('active');
+}
+
+// Lukker menuen, når et link i menuen bliver klikket
+document.querySelectorAll('.main-navigation a').forEach(item => {
+    item.addEventListener('click', function() {
+        const menu = document.querySelector('.main-navigation ul');
+        menu.classList.remove('active');
+    });
+});
+
+   </script>
 
     
     <div id="content" class="site-content">

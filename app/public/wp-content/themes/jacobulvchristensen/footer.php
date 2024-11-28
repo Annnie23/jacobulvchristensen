@@ -4,7 +4,7 @@
             <h3>Maskinstation Jacob Ulv</h3>
             <div class="footer-map">
                 <!-- Google Maps Embed -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2262.11846288238!2d8.630329276387767!3d55.46060151446004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464b23533512a8f9%3A0x6c8132dac104879f!2sSneumg%C3%A5rdsvej%202%2C%206731%20Tj%C3%A6reborg!5e0!3m2!1sda!2sdk!4v1732438864113!5m2!1sda!2sdk" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2262.11846288238!2d8.630329276387767!3d55.46060151446004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464b23533512a8f9%3A0x6c8132dac104879f!2sSneumg%C3%A5rdsvej%202%2C%206731%20Tj%C3%A6reborg!5e0!3m2!1sda!2sdk!4v1732438864113!5m2!1sda!2sdk" max-width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
         <div class="footer-section">

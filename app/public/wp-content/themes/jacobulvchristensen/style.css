@@ -73,6 +73,97 @@ header .container {
     padding-right: 20px;
 }
 
+.hamburger{
+    display: none;
+}
+
+/* Medium skærme (tablets) */
+@media screen and (max-width: 768px) {
+    header {
+        flex-wrap: wrap; /* Tillader elementer at bryde linjen */
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    header .logo {
+        max-width: 150px; /* Mindre logo */
+    }
+
+    header nav {
+        margin-left: 0; /* Juster placering af menuen */
+        gap: 10px; /* Reducerer mellemrum mellem links */
+    }
+
+    .main-navigation ul {
+        flex-wrap: wrap; /* Tillader links at gå til næste linje */
+        justify-content: center; /* Centrerer navigationen */
+    }
+
+    .main-navigation a {
+        font-size: 0.9rem; /* Mindre tekststørrelse */
+        padding: 8px 10px;
+    }
+}
+
+/* Små skærme (mobiltelefoner) */
+@media screen and (max-width: 576px) {
+    header {
+        flex-direction: column; /* Lægger alt i én kolonne */
+        align-items: center; /* Centrerer elementerne */
+    }
+
+    header nav {
+        display: none; /* Skjul menuen til hamburgermenu bruges */
+    }
+
+    /* Tilføj hamburgermenu */
+    .hamburger {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .main-navigation ul {
+        display: none; /* Skjul navigationen som standard */
+        flex-direction: column; /* Vertikal menu */
+        background-color: #f9f8f2; /* Baggrund til dropdown */
+        width: 100%; /* Fylder hele bredden */
+        padding: 20px 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+
+    .main-navigation ul.active {
+        display: flex; /* Viser menuen, når den er aktiv */
+    }
+
+    .main-navigation a {
+        text-align: center; /* Centrer links */
+        padding: 10px;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    header nav {
+        display: none; /* Skjuler navigationen som standard */
+    }
+
+    .main-navigation ul.active {
+        display: flex; /* Viser menuen, når den er aktiv */
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+}
+
+
 
 
 /*Topbar */
@@ -197,7 +288,9 @@ header .container {
     max-width: 1200px; /* Giver en breddebegrænsning, så de ikke strækker sig for meget */
     margin: 0 auto; /* Centrerer hele containeren på siden */
     padding: 20px;
+    padding-bottom: 60px;
     gap: 20px; /* Giver lidt afstand mellem boksene */
+    position: relative;
 }
 
 .footer-section {
@@ -232,6 +325,9 @@ header .container {
     text-align: left; /* Centrerer logoet */
 }
 
+.dme-branding{
+    margin-bottom: 100px;
+}
 .footer-section .dme-branding img {
     max-width: 100px; /* Tilpas bredden af logoet */
     height: auto; /* Bevarer proportionerne */
@@ -243,6 +339,16 @@ header .container {
     transform: scale(1.1); /* Gør logoet lidt større ved hover */
 }
 
+.footer-content{
+    position: absolute;
+  bottom: 10px; /* Afstand fra bunden */
+  left: 50%; /* Centrerer teksten horisontalt */
+  transform: translateX(-50%); /* Justerer for præcis centrering */
+  font-size: 14px;
+  color: #17365d;
+  text-align: center;
+
+}
 
 
 /* Container for video og overskrift */
@@ -307,6 +413,7 @@ header .container {
 
 
 /* Container til bokse under 'Vi tilbyder' */
+/* Standardindstilling for større skærme */
 .box-section {
     display: flex;
     flex-wrap: wrap;
@@ -315,11 +422,9 @@ header .container {
     padding: 20px;
 }
 
-
-
 .box-container {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap; /* Tillader bokse at bryde linjer */
     gap: 20px;
     justify-content: center;
 }
@@ -329,32 +434,38 @@ header .container {
     background-color: #f0f0f0;
     border-radius: 5px;
     overflow: hidden;
-    max-width: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    
-        flex: 1 1 calc(33.333% - 40px); /* Tre bokse pr. række på store skærme */
-        max-width: calc(33.333% - 40px);
-    
+    flex: 1 1 calc(20% - 20px); /* Fem bokse pr. række */
+    max-width: calc(20% - 20px);
 }
 
+/* Medium skærme (tablets) */
 @media screen and (max-width: 768px) {
     .box {
-        flex: 1 1 calc(50% - 20px); /* To bokse pr. række på mellemstore skærme */
-        max-width: calc(50% - 20px);
+        flex: 1 1 calc(33.333% - 20px); /* Tre bokse pr. række */
+        max-width: calc(33.333% - 20px);
     }
 }
 
+/* Små skærme (mobiltelefoner) */
 @media screen and (max-width: 576px) {
+    .box-section {
+        flex-direction: column; /* Skifter layout til kolonne */
+        align-items: center; /* Centrerer boksene */
+        gap: 15px; /* Reducerer afstand mellem boksene */
+    }
+
     .box {
-        flex: 1 1 100%; /* En boks pr. række på små skærme */
-        max-width: 100%;
+        flex: 1 1 100%; /* Fylder hele rækken */
+        max-width: 100%; /* Sikrer fuld bredde */
     }
 
     .box-link {
-        font-size: 1rem; /* Mindre skrifttype til boksene */
+        font-size: 2rem; /* Mindre skrifttype til boksene */
     }
 }
+
 .box:hover {
     transform: scale(1.05);
 }
@@ -377,14 +488,16 @@ header .container {
     font-weight: 600;
     z-index: 10;
 }
+
 .box-title:hover {
-   color: #adc5d9;
+    color: #adc5d9;
 }
 
 .box-link {
     text-decoration: none;
     color: inherit;
 }
+
 
 .contact-container {
     display: flex;
@@ -458,7 +571,68 @@ header .container {
     justify-content: center;
     }
 
+/* Tablets og mindre skærme */
+@media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column; /* Lægger formular og kort i én kolonne */
+      align-items: center; /* Centrerer elementerne */
+      gap: 40px; /* Øger afstanden mellem elementerne */
+    }
+  
+    .contact-form {
+      width: 100%; /* Formularen fylder hele bredden */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Mindre skygge */
+    }
+  
+    .contact-form h2 {
+      font-size: 22px; /* Mindre overskrift */
+    }
+  
+    .contact-form h4 {
+      font-size: 18px;
+    }
+  
+    .contact-form p {
+      font-size: 14px; /* Mindre skrift */
+    }
 
+    .contact-map {
+        display: none; /* Skjuler kortet på mindre skærme */
+    }
+  }
+  
+  /* Små skærme og mobiltelefoner */
+  @media (max-width: 480px) {
+    .contact-container {
+      padding: 0 10px; /* Mindre plads på siderne */
+      gap: 20px; /* Mindre afstand */
+    }
+  
+    .contact-form {
+      padding: 15px; /* Mindre padding */
+    }
+  
+    .wpcf7-form input[type="text"],
+    .wpcf7-form input[type="email"],
+    .wpcf7-form textarea {
+      font-size: 8px; /* Mindre input-tekst */
+      padding: 8px; /* Mindre padding */
+    
+    }
+  
+    .wpcf7-form input[type="submit"] {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .contact-form h2 {
+      font-size: 20px; /* Endnu mindre overskrift */
+    }
+  
+    .contact-form p {
+      font-size: 13px; /* Justerer tekststørrelsen yderligere */
+    }
+  }
 
     .h1img {
         text-align: center;
@@ -511,6 +685,47 @@ header .container {
         padding: 20px 20px 0 20px;
         margin-left: 60px;
     }
+
+    @media (max-width: 768px) {
+        .service-overskrift {
+          font-size: 3rem; /* Mindre overskrift */
+          top: 45%; /* Tilpasser position lidt */
+        }
+      
+        .service-introduction {
+          padding: 15px;
+          max-width: 95%; /* Fylder næsten hele bredden */
+          margin-left: 20px; /* Mindre margin på mindre skærme */
+        }
+      
+        .service-title {
+          font-size: 1.5rem; /* Justerer størrelsen på titlen */
+          margin-left: 20px; /* Mindre venstremargin */
+          padding: 15px 15px 0 15px; /* Mindre padding */
+        }
+      }
+      @media (max-width: 480px) {
+        .service-overskrift {
+          font-size: 2.5rem; /* Endnu mindre overskrift */
+          top: 50%; /* Justerer placering for at forblive centreret */
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      
+        .service-introduction {
+          padding: 10px;
+          max-width: 90%; /* Mindsker bredden for små skærme */
+          margin-left: 10px; /* Minimal margin */
+          margin-bottom: 15px; /* Mindre afstand i bunden */
+        }
+      
+        .service-title {
+          font-size: 1.2rem; /* Gør titlen mere kompakt */
+          margin-left: 10px; /* Minimal margin */
+          padding: 10px 10px 0 10px; /* Justeret padding */
+        }
+      }
+            
     
     .service-detail {
         font-size: 1.2rem;
@@ -559,22 +774,14 @@ header .container {
 
 /* Mobil (maks. 576px) */
 @media screen and (max-width: 576px) {
-    header .logo {
-        max-width: 150px; /* Reducer logoets størrelse */
-    }
 
-    header nav {
-        font-size: 14px; /* Mindre skrifttype for menupunkter */
-    }
 
     .footer-container {
         flex-direction: column; /* Placer elementer i én kolonne */
         text-align: center; /* Centrer tekst i footer */
     }
 
-    .box {
-        max-width: 100%; /* Boksene fylder hele bredden */
-    }
+
 
     .hero-title-before-video {
         font-size: 1.5rem; /* Mindre font til overskriften */
@@ -583,21 +790,9 @@ header .container {
 
 /* Tablet (maks. 768px) */
 @media screen and (max-width: 768px) {
-    header .container {
-        flex-direction: column; /* Placer header-indhold vertikalt */
-        align-items: center;
-    }
 
-    header nav {
-        flex-direction: column; /* Menu i én kolonne */
-        gap: 10px; /* Mindre afstand mellem menupunkter */
-    }
 
-    .box-container {
-        flex-wrap: wrap; /* Tillad boksene at bryde linjen */
-        justify-content: center;
-    }
-
+ 
     .footer-container {
         flex-direction: column; /* Footer-indhold i én kolonne */
         text-align: center;
@@ -606,13 +801,9 @@ header .container {
 
 /* Små desktops og tablets (maks. 992px) */
 @media screen and (max-width: 992px) {
-    header .logo {
-        max-width: 180px;
-    }
 
-    .box {
-        max-width: 45%; /* Giv boksene mere plads */
-    }
+
+   
 
     .footer-section {
         flex: unset; /* Fjern fleksibilitet, så de tilpasses bedre */
@@ -641,6 +832,9 @@ header .container {
         margin-bottom: 20px; /* Lidt afstand mellem sektionerne */
         padding: 0; /* Lidt plads på siderne */
     }
+
+    .dme-branding {
+    text-align: center !important;    }
 }
 
 /* Responsiv skalering */
