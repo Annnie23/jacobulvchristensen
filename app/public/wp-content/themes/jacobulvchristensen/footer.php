@@ -12,6 +12,7 @@
             <p><strong>Tlf.:</strong> <a href="tel:+4575457734">+45 75 45 77 34</a></p>
             <p><strong>Email:</strong> <a href="mailto:ju@jacobulv.dk">ju@jacobulv.dk</a></p>
             <p><strong>Adresse:</strong><br> Sneumgårdsvej 2, 6731<br> Tjæreborg</p>
+            <p><strong>CVR:</strong>27648622</p>
         </div>
         <div class="footer-section">
             <h3>Følg os</h3>
