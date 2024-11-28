@@ -629,3 +629,6 @@ Stack trace:
 [28-Nov-2024 08:38:37 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
 [28-Nov-2024 08:40:50 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
 [28-Nov-2024 08:41:02 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[28-Nov-2024 08:55:15 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[28-Nov-2024 08:56:21 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
+[28-Nov-2024 08:56:28 UTC] PHP Warning:  Undefined variable $your_browser_does_not_support_video in C:\Users\norde\Local Sites\jacobulvchristensen\app\public\wp-content\themes\jacobulvchristensen\index.php on line 24
