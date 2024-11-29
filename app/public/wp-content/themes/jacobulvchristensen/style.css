@@ -8,7 +8,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f9f8f2 !important;
+    background-color: #f9f8f2;
     color: #333;
 }
 
@@ -16,7 +16,7 @@ body {
 
 /* Header */
 header {
-    padding: 40px 20px 20px 20px;
+    padding: 20px;
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -47,7 +47,7 @@ header .container {
 }
 
 .main-navigation li {
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .main-navigation a {
@@ -104,6 +104,10 @@ header .container {
 
     .main-navigation li {
         margin-bottom: 10px; 
+        background-color: #adc5d9;
+        height: 40px;
+        width: 100px;
+        border-radius: 5px;
     }
 
     .main-navigation a {
@@ -246,6 +250,10 @@ header .container {
     width: 55%; 
     white-space: normal; 
     z-index: 10; 
+}
+
+.hero-title-before-video h1{
+    font-size: 4rem;
 }
 
 /* Responsiv hero sektion */
@@ -669,7 +677,7 @@ ul {
 
 /* Footer */
 .footer {
-    background-color: #f9f8f2;
+    background-color: #fff;
     text-align: left;
     font-family: Arial, sans-serif;
     color: #17365d;
