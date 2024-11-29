@@ -1,12 +1,11 @@
 <?php
-/* Template Name: Grovfoder */
 get_header(); ?>
 
 <div class="service-container">
     <h1 class="service-overskrift"><?php the_title(); ?></h1>
 
     <?php
-    // WP Query for at hente indlægget med sluggen 'grovfoder' fra CPT 'services'
+    // WP Query for at hente indlægget med sluggen 'transport' fra CPT 'services'
     $args = array(
         'post_type' => 'service',
         'name' => 'transport',

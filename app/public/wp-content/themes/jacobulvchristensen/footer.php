@@ -8,18 +8,21 @@
             </div>
         </div>
         <div class="footer-section">
-            <h3>Kontakt os</h3>
-            <p><strong>Tlf.:</strong> <a href="tel:+4575457734">+45 75 45 77 34</a></p>
+        <h3><a href="<?php echo esc_url(home_url('/kontakt')); ?>">Kontakt os</a></h3>
+        <p><strong>Tlf.:</strong> <a href="tel:+4575457734">+45 75 45 77 34</a></p>
             <p><strong>Email:</strong> <a href="mailto:ju@jacobulv.dk">ju@jacobulv.dk</a></p>
-            <p><strong>Adresse:</strong><br> Sneumgårdsvej 2, 6731<br> Tjæreborg</p>
-            <p><strong>CVR:</strong>27648622</p>
+            <p><strong>Adresse:</strong><br>
+    <a href="https://www.google.com/maps?q=Sneumgårdsvej+2,+6731+Tjæreborg" target="_blank" class="address-link">
+        Sneumgårdsvej 2, 6731<br> Tjæreborg
+    </a>
+</p>            <p><strong>CVR:</strong> 27648622</p>
         </div>
         <div class="footer-section">
             <h3>Følg os</h3>
-            <p><a href="https://www.instagram.com" target="_blank">Instagram</a></p>
-            <p><a href="https://www.facebook.com" target="_blank">Facebook</a></p>
+            <p><a href="https://www.instagram.com/jacobulvmaskinstation/" target="_blank">Instagram</a></p>
+            <p><a href="https://www.facebook.com/p/Maskinstation-Jacob-Ulv-Christensen-100063791912014/?locale=da_DK" target="_blank">Facebook</a></p>
             <div class="dme-branding">
-                <a href="<?php echo home_url(); ?>" class="dme-logo">
+                <a href="https://dmoge.dk/" class="dme-logo">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/dme.png" alt="DME">
                 </a>
             </div>

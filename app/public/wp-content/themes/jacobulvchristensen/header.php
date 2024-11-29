@@ -21,15 +21,15 @@ if ($topbar_text || $topbar_text_2): ?>
         <?php if ($icon_1 && $topbar_text): ?>
             <div class="topbar-item">
                 <img src="<?php echo esc_url($icon_1); ?>" alt="Ikon 1" class="topbar-icon">
-                <span class="topbar-text-content"><?php echo esc_html($topbar_text); ?></span>
-            </div>
+                <a href="mailto:ju@jacobulv.dk" class="topbar-text-content"><?php echo esc_html($topbar_text); ?></a>
+                </div>
         <?php endif; ?>
 
         <?php if ($icon_2 && $topbar_text_2): ?>
             <div class="topbar-item">
                 <img src="<?php echo esc_url($icon_2); ?>" alt="Ikon 2" class="topbar-icon">
-                <span class="topbar-text-content"><?php echo esc_html($topbar_text_2); ?></span>
-            </div>
+                <a href="tel:+45 75 45 77 34" class="topbar-text-content"><?php echo esc_html($topbar_text_2); ?></a>
+                </div>
         <?php endif; ?>
 
         <?php if ($topbar_link): ?>
@@ -37,10 +37,10 @@ if ($topbar_text || $topbar_text_2): ?>
         <?php endif; ?>
     </div>
 <?php endif; ?>
-
-
     <!-- Slut på topbar -->
 
+
+    <!-- Header -->
     <header class="site-header">
         <div class="container">
             <div class="site-branding">
@@ -48,34 +48,18 @@ if ($topbar_text || $topbar_text_2): ?>
                     <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>">
                 </a>
             </div>
-            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            
             <nav class="main-navigation">
                 <?php
-                wp_nav_menu(array(
-                    'theme_location' => 'main_menu',
-                    'menu_id'        => 'primary-menu',
-                    'container'      => false,
-                ));
+              wp_nav_menu(array(
+                'theme_location' => 'main_menu',
+                'menu_id'        => 'primary-menu',
+                'container'      => false,
+            ));
                 ?>
             </nav>  
         </div>
     </header>
-
-   <script>
-    function toggleMenu() {
-    const menu = document.querySelector('.main-navigation ul');
-    menu.classList.toggle('active');
-}
-
-// Lukker menuen, når et link i menuen bliver klikket
-document.querySelectorAll('.main-navigation a').forEach(item => {
-    item.addEventListener('click', function() {
-        const menu = document.querySelector('.main-navigation ul');
-        menu.classList.remove('active');
-    });
-});
-
-   </script>
 
     
     <div id="content" class="site-content">

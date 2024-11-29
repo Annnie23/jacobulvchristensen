@@ -13,10 +13,32 @@ $cvr = get_field('cvr');
 <div class="contact-container">
     <div class="contact-form">
         <h4><?php echo esc_html($kort_tekst_over_kontaktformen); ?></h4>
-        <p><?php echo esc_html($adresse); ?></p>
-        <p><?php echo esc_html($email); ?></p>
-        <p><?php echo esc_html($telefonummer); ?></p>
-        <p><?php echo esc_html($cvr); ?></p>
+        <p>
+            <strong>Adresse:</strong><br>
+            <a href="https://www.google.com/maps?q=<?php echo urlencode($adresse); ?>" target="_blank" class="address-link">
+                <?php echo esc_html($adresse); ?>
+            </a>
+        </p>
+
+        <p>
+            <strong>E-mail:</strong><br>
+            <a href="mailto:<?php echo esc_attr($email); ?>" class="email-link">
+                <?php echo esc_html($email); ?>
+            </a>
+        </p>
+
+        <p>
+            <strong>Telefon:</strong><br>
+            <a href="tel:<?php echo esc_attr($telefonummer); ?>" class="phone-link">
+                <?php echo esc_html($telefonummer); ?>
+            </a>
+        </p>
+
+        <p>
+            <strong>CVR:</strong><br>
+            <?php echo esc_html($cvr); ?>
+        </p>
+
         
 
         <?php echo do_shortcode('[contact-form-7 id="7a0d828" title="Kontakt JUC"]'); ?>
